@@ -64,6 +64,67 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-下载连接转换器" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/07/13/%E4%B8%8B%E8%BD%BD%E8%BF%9E%E6%8E%A5%E8%BD%AC%E6%8D%A2%E5%99%A8/" class="article-date">
+  <time datetime="2020-07-13T03:32:24.656Z" itemprop="datePublished">2020-07-13</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/07/13/%E4%B8%8B%E8%BD%BD%E8%BF%9E%E6%8E%A5%E8%BD%AC%E6%8D%A2%E5%99%A8/">下载连接转换器</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <hr>
+<p>title: 下载连接转换器<br>date: 2020-07-13 11:32:24<br>tags:</p>
+<hr>
+<pre><code>
+import base64
+urll=input('请输入需要转换的连接：')
+url = urll
+#url='thunder://原始链接'
+# 看见thunder://后面的字符串比较熟悉，对没错就是base64编码，去除thunder://
+surl=url.lstrip('thunder://')
+# base64转成二进制
+burl=base64.b64decode(surl)
+# 这里注意，得看原来的二进制转换编码是什么，我这里是GB2312的，有时是utf-8的，慢慢试常用的编码格式
+# ISO-8859-1
+# GB2312
+# GBK
+# GB18030
+# UTF-16
+# UTF-8
+httpurl=burl.decode('GB2312')
+httpurl=httpurl.strip('AAZZ')
+print('转换连接成功')
+print(httpurl)
+# 最后拿到连接，直接去浏览器下载，速度也很快
+
+</code></pre>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2020/07/13/%E4%B8%8B%E8%BD%BD%E8%BF%9E%E6%8E%A5%E8%BD%AC%E6%8D%A2%E5%99%A8/" data-id="ckcjyvtnx00004su7c1yfft6m" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
     <article id="post-图片二维码MyQR工具使用方法" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2020/07/11/%E5%9B%BE%E7%89%87%E4%BA%8C%E7%BB%B4%E7%A0%81MyQR%E5%B7%A5%E5%85%B7%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95/" class="article-date">
@@ -229,6 +290,10 @@
     <h3 class="widget-title">Recent Posts</h3>
     <div class="widget">
       <ul>
+        
+          <li>
+            <a href="/2020/07/13/%E4%B8%8B%E8%BD%BD%E8%BF%9E%E6%8E%A5%E8%BD%AC%E6%8D%A2%E5%99%A8/">下载连接转换器</a>
+          </li>
         
           <li>
             <a href="/2020/07/11/%E5%9B%BE%E7%89%87%E4%BA%8C%E7%BB%B4%E7%A0%81MyQR%E5%B7%A5%E5%85%B7%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95/">图片二维码MyQR工具使用方法</a>
